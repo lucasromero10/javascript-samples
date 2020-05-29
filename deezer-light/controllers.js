@@ -1,4 +1,4 @@
-/* Vladimir Kosmala @ Deezer, Licence Apache */
+
 
 var LOGNS = 'APP ::';
 var APP_ID = '118825';
@@ -60,7 +60,7 @@ angapp.directive('onKeyupSearch', function() {
 });
 
 angapp.controller("AppController", function($scope, $route, $routeParams, $location, $rootScope) {
-	// Init config
+	
 	$rootScope.title = 'DZ';
 	$scope.logged = false;
 
@@ -79,7 +79,7 @@ angapp.controller("AppController", function($scope, $route, $routeParams, $locat
 	$scope.playing_album_link = null;
 	$scope.playing_cover_src = null;
 
-	// Global for test purpose
+
 	rootScope = $rootScope;
 	scope = $scope;
 
@@ -91,7 +91,7 @@ angapp.controller("AppController", function($scope, $route, $routeParams, $locat
 		}
 	});
 
-	// --------------------------------------------------- Methods
+	
 
 	$scope.login = function() {
 		console.log(LOGNS, 'login clicked');
@@ -160,7 +160,7 @@ angapp.controller("AppController", function($scope, $route, $routeParams, $locat
 		DZ.player.next();
 	};
 
-	// --------------------------------------------------- Angular events
+
 
 	$scope.$watch('search_value', function(search_value, oldValue) {
 		if (search_value !== oldValue) {
@@ -172,7 +172,7 @@ angapp.controller("AppController", function($scope, $route, $routeParams, $locat
 	$scope.$on("$routeChangeSuccess", function($currentRoute, $previousRoute) {
 		if ($scope.logged) {
 			if ($route.current.action !== 'search') {
-				$scope.last_path = $location.path(); // when empty search go to this
+				$scope.last_path = $location.path(); 
 			}
 
 			$scope.handleRoute();
@@ -188,7 +188,7 @@ angapp.controller("AppController", function($scope, $route, $routeParams, $locat
 		DZ.player.seek(x / xMax * 100);
 	};
 
-	// --------------------------------------------------- DZ events
+	
 
 	DZ.Event.subscribe('player_loaded', function(){
 		console.log(LOGNS, 'check login...');
@@ -218,7 +218,7 @@ angapp.controller("AppController", function($scope, $route, $routeParams, $locat
 	});
 
 	DZ.Event.subscribe('player_position', function(e){
-		//flood console.log(LOGNS, "Player position", e);
+
 		$scope.time_current = e[0];
 		if (e[1]) $scope.time_total = +e[1];
 		$scope.$apply();
@@ -240,7 +240,6 @@ angapp.controller("AppController", function($scope, $route, $routeParams, $locat
 		});
 	});
 
-	// --------------------------------------------------- Handle routes
 
 	$scope.handleRoute = function() {
 		var renderAction = $route.current.action;
