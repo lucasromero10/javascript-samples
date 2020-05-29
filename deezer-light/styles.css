@@ -1,8 +1,4 @@
-/* Vladimir Kosmala @ Deezer, Licence Apache */
 
-/* --------------------------------------------
-	COMMON
--------------------------------------------- */
 
 .app {
 	font-size: 14px;
@@ -43,9 +39,7 @@ h4 {
 	color: #A5A5A5;
 }
 
-/* --------------------------------------------
-	HEADER PLAYER
--------------------------------------------- */
+
 
 #header {
 	background: rgb(244, 244, 244);
@@ -178,9 +172,7 @@ h4 {
 	}
 }
 
-/* --------------------------------------------
-	MENU
--------------------------------------------- */
+
 
 #menu {
 	margin-bottom: 15px;
@@ -198,9 +190,7 @@ h4 {
 		border-radius: 3px;
 	}
 
-/* --------------------------------------------
-	MAIN CONTENT
--------------------------------------------- */
+
 
 #wrapper {
 	padding-top: 90px;
@@ -209,14 +199,14 @@ h4 {
 		padding: 0 15px;
 	}
 
-		/* Effect on showing covers */
+	
 
 		.cover {
 			opacity: 0.1;
 			transition: opacity 0.2s ease-in-out;
 		}
 
-		/* Default big centered message */
+	
 
 		.loader {
 			display: table;
@@ -235,7 +225,7 @@ h4 {
 					border-radius: 10px;
 				}
 
-		/* Grid of covers */
+		
 
 		.grid_list_small {
 			margin: 10px;
@@ -253,7 +243,7 @@ h4 {
 				text-align: center;
 			}
 
-		/* Two parts cover + tracks list */
+	
 
 		.album_cover_view {
 			float: left;

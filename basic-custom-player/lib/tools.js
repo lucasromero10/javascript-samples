@@ -26,7 +26,7 @@ function getEditoSelection(genreId){
     DZ.api('/editorial/' + genreId + '/selection', function(response){
         console.log(response);
 
-        //plays the first album of the retrieved selection
+        
         DZ.player.playAlbum(response.data[0].id);
     });
 }
@@ -47,7 +47,7 @@ function getAlbumCover(albumId) {
 }
 
 function favoriteAlbum(albumId) {
-    //add an album to my favorites
+
     DZ.api('/user/me/albums', 'POST',
         {
             album_id : albumId, 
